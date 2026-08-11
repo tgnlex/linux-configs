@@ -85,6 +85,11 @@ spin() {
   done 
 }
 
+backup-all() {
+  for file in *.$1 ; do 
+    cp "$file" "$file.bak"
+  done
+}
 # =================== #
 # IMPORT BASH ALIASES # 
 # =================== #
