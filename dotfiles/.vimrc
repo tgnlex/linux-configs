@@ -58,8 +58,10 @@ map <leader>tn :tabnew<cr>
 map <leader>h :split<cr>
 map <leader>v :vsplit<cr>
 noremap <F12> :PlugInstall<cr>
-noremap <F2> :read !date<cr>
-noremap <F3> :NERDTreeToggle<cr>
+noremap <F2> :NERDTreeToggle<cr>
+noremap <F3> :terminal<cr>  
+noremap <F4> :read !date<cr>
+
 nnoremap O O<esc>
 nnoremap o o<esc>
 " ----------- VIMSCRIPT ------------"
