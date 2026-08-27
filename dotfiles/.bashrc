@@ -36,9 +36,7 @@ export CONFIGS_DIR='/config'   # LINUX CONFIG
 # ======================== #
 export XONSHRC_SRC="/config/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
 export BASHRC_SRC="/config/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
-export TCSHRC_SRC="/config/dotfiles/.tcshrc"    # TCSHRC MAIN SOURCE FILE 
 export ZSHRC_SRC="/config/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE 
-export KSHRC_SRC="/config/dotfiles/.kshrc"      # KSHRC MAIN SOURCE FILE
 export VIMRC_SRC="/config/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
 export BASH_ALIASES_SRC="/config/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
 export INPUTRC_SRC="/config/dotfiles/.inputrc" # INPUT RC FILE 
