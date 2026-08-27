@@ -28,7 +28,7 @@ $GITHUB = "git@github.com:tgnlex"
 # =========== #
 # DIRECTORIES #
 # ============ #
-
+$PROJECTS_DIR = "/projects"
 $REPOS_DIR = "/repos"       # GITHUB REPOS    # Actual repos directory
 $CONFIGS_DIR = "/config"   # LINUX CONFIGS   # Soft link to /repos/linux/arch
 $DOTFILES_DIR = "/config/dotfiles" # DOTFILES DIR    # Soft link to /repos/linux/arch/dotfiles
@@ -39,7 +39,6 @@ $DOTFILES_DIR = "/config/dotfiles" # DOTFILES DIR    # Soft link to /repos/linux
 
 $XONSHRC_SRC = "/config/dotfiles/.xonshrc"  # XONSHRC MAIN SOURCE FILE
 $BASHRC_SRC = "/config/dotfiles/.bashrc"    # BASHRC MAIN SOURCE FILE
-$ZSHRC_SRC = "/config/dotfiles/.zshrc"      # ZSHRC MAIN SOURCE FILE 
 $VIMRC_SRC = "/config/dotfiles/.vimrc"      # VIMRC MAIN SOURCE FILE
 $BASH_ALIASES_SRC = "/config/dotfiles/.bash_aliases"   # BASH ALIASES SOURCE FILE 
 
@@ -89,11 +88,8 @@ aliases['refresh-self'] = "source ~/.xonshrc"
 aliases['update-bash-aliases'] = "cp -r $BASH_ALIASES_SRC /root && cp -r $BASH_ALIASES_SRC /home/alex/"
 aliases['update-xonsh'] = "cp -r $XONSHRC_SRC /root/ && cp -r $XONSHRC_SRC /home/alex/ && refresh-self"
 aliases['update-bash'] = "cp -r $BASHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
-aliases['update-tcsh'] = "cp -r $TCSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
-aliases['update-zsh'] = "cp -r $ZSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
-aliases['update-ksh'] = "cp -r $KSHRC_SRC /root/ && cp -r $BASHRC_SRC /home/alex/"
 aliases['update-vim'] = "cp -r $VIMRC_SRC /root/ && cp -r $VIMRC_SRC /home/alex"
-aliases['update-shells'] = "update-ksh && update-zsh && update-tcsh && update-bash && update-bash-aliases && update-xonsh-scripts && update-xonsh"
+aliases['update-shells'] = "update-bash && update-bash-aliases && update-xonsh"
 aliases['update-all'] = "update-vim && update-shells"
 
 aliases['runescape'] = "flatpak run com.adamcake.Bolt --no-sandbox &"
