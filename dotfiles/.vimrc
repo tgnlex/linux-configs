@@ -84,6 +84,11 @@ augroup HighlightYank
     autocmd!
     autocmd TextYankPost * silent! call s:hl_yank(300)
 augroup END
+
+:augroup uncompress
+	 autocmd!
+	 autocmd BufEnter *.gz	%!gunzip
+:augroup END
 " -------------------------------"
 "
 " --------- STATUS LINE -------- "
