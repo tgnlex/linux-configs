@@ -36,11 +36,11 @@ alias gen-docs=". /sh/doc.sh"
 alias ndev="npm run dev"
 alias ntest="npm run test"
 alias web="firefox &"
+alias conn="echo 'Total Connections on port 80 and 443:'; netstat -plant | grep '80\|443' | grep -v LISTEN | wc -l"
 alias edit-xonshrc="$EDITOR $XONSHRC_SRC"
 
 alias edit-bashrc="$EDITOR $BASHRC_SRC"
 alias edit-vimrc="$EDITOR $VIMRC_SRC"
-
 alias edit-bash-aliases="$EDITOR $BASH_ALIASES_SRC"
 
 alias refresh-bash="source ~/.bashrc"

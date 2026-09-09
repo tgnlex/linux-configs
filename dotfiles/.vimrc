@@ -40,6 +40,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'prabirshrestha/vim-lsp'
   Plug 'mattn/vim-lsp-settings'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'jayli/vim-easycomplete'
 call plug#end()
 " ------------------------------ "
 
@@ -73,6 +74,12 @@ function! s:hl_yank(duration) abort
     let l:winid = win_getid()
     call timer_start(a:duration, {-> matchdelete(l:m, l:winid)})
 endfunction
+
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> K  <plug>(lsp-hover)
+endfunction
 " --------- AUTOCOMMANDS ---------- "
 """ Set fold based on filetype """
 augroup filetype_vim
@@ -85,10 +92,6 @@ augroup HighlightYank
     autocmd TextYankPost * silent! call s:hl_yank(300)
 augroup END
 
-:augroup uncompress
-	 autocmd!
-	 autocmd BufEnter *.gz	%!gunzip
-:augroup END
 " -------------------------------"
 "
 " --------- STATUS LINE -------- "

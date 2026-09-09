@@ -8,11 +8,15 @@
 # ======= #
 fastfetch
 printf "Welcome to the bash shell Alex!\n"
+# ========= #
+# Libraries #
+# ========= #
+source /root/lib/os
 
 # ============== #
 # PATH VARIABLES #
 # ============== #
-export PATH='/usr/bin:/usr/bin/local:/bin:/root/.local/bin'
+export PATH='/usr/bin:/usr/bin/local:/bin:/root/.local/bin:/root/bin:/usr/bin/vendor_perl'
 export JAVA='/usr/bin/java'
 
 # ============= #
